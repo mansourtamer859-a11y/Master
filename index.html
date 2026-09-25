@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="صفحة محمية بكلمة مرور">
+  <title>الموقع المحمي</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <section id="loginView" class="card" aria-labelledby="loginTitle">
+      <div class="badge" aria-hidden="true">🔒</div>
+      <h1 id="loginTitle">مرحبًا بك</h1>
+      <p>يرجى إدخال كلمة المرور للوصول إلى الموقع.</p>
+      <form id="passwordForm" novalidate>
+        <label for="password">كلمة المرور</label>
+        <div class="input-row">
+          <input id="password" name="password" type="password" inputmode="numeric" autocomplete="current-password" required aria-describedby="passwordMessage">
+          <button type="submit">دخول</button>
+        </div>
+        <p id="passwordMessage" class="message" role="alert" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="protectedView" class="card protected" hidden aria-labelledby="welcomeTitle">
+      <div class="badge success" aria-hidden="true">✓</div>
+      <h1 id="welcomeTitle">تم تسجيل الدخول بنجاح</h1>
+      <p>هذه هي الصفحة الرئيسية للموقع. يمكنك استبدال هذا المحتوى بواجهة مشروعك.</p>
+      <button id="logoutButton" class="secondary" type="button">تسجيل الخروج</button>
+    </section>
+  </main>
+</body>
+</html>

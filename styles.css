@@ -1,0 +1,98 @@
+:root {
+  font-family: Tahoma, Arial, sans-serif;
+  color: #172033;
+  background: #f3f6fb;
+  line-height: 1.7;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(100%, 460px);
+  padding: 40px 32px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(30, 55, 90, .12);
+}
+
+.badge {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #e8f0ff;
+  font-size: 28px;
+}
+
+.badge.success { color: #087443; background: #e5f8ef; font-size: 32px; }
+
+h1 { margin: 0 0 10px; font-size: clamp(1.6rem, 4vw, 2rem); }
+
+p { margin: 0 0 24px; color: #526176; }
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  text-align: right;
+  font-weight: 700;
+}
+
+.input-row { display: flex; gap: 10px; }
+
+input, button {
+  min-height: 48px;
+  border-radius: 10px;
+  font: inherit;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 0 14px;
+  border: 1px solid #b9c5d6;
+  direction: ltr;
+  text-align: left;
+}
+
+input:focus-visible, button:focus-visible { outline: 3px solid #91b9ff; outline-offset: 2px; }
+
+button {
+  padding: 0 22px;
+  border: 0;
+  color: #fff;
+  background: #2166d1;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:hover { background: #174fa8; }
+
+.secondary { background: #64748b; }
+.secondary:hover { background: #475569; }
+
+.message { min-height: 28px; margin: 12px 0 0; color: #b42318; font-size: .95rem; }
+
+.protected p { margin-bottom: 24px; }
+
+[hidden] { display: none !important; }
+
+@media (max-width: 420px) {
+  .card { padding: 32px 20px; }
+  .input-row { flex-direction: column; }
+}
